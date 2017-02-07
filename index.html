@@ -13,11 +13,11 @@
 	  	<link href="css/main.css" rel="stylesheet">
 	  	<link href="css/queries.css" rel="stylesheet">
 	</head>
-	<body>
+	<body onload="init()">
 	  	<div class="w-app">
 	  		<div class="container">
 	  			<aside class="col-md-4 w-contacts">
-	  				<header class="w-profile clearfix">
+	  				<header class="w-profile clearfix" >
 	  					<div class="avatar col-xs-7">
 	  						<img src="image/gian.jpg" alt="">
 	  					</div>
@@ -28,61 +28,13 @@
 	  					</div>
 	  				</header>
 	  				<div class="w-search icon-search">
-	  					<input type="text" placeholder="Buscar o empezar un chat nuevo" class="w-search-contacts">
+	  					<input type="text" placeholder="Buscar o empezar un chat nuevo" class="w-search-contacts" keyup="buscador()">
 	  				</div>
 	  				<ul class="w-recent-chats" id="lista-chat">
-	  					<li>
-		  					<div class="avatar">
-		  						<img src="image/logocodeacademy.png" alt="" class="wh-44">
-		  						<h4 class="w-contact-name">Laboratoria Perú</h4>
-		  						<p class="w-last-message" id="mensaje">No se pique!!</p>
-		  					</div>
-							<div class="time" id="hora">14:27</div>
-	  					</li>
-	  					<li>
-	  						<div class="avatar">
-	  							<img src="image/raymi.jpg" alt="" class="wh-44">
-	  							<h4 class="w-contact-name">Raymi Saldomando</h4>
-	  							<p class="w-last-message">La clase va bien!</p>
-	  						</div>
-	  						<div class="time">11:25</div>
-	  					</li>
-	  					<li>
-	  						<div class="avatar">
-	  							<img src="image/mariana.jpg" alt="" class="wh-44">
-	  							<h4 class="w-contact-name">Mariana Costa</h4>
-	  							<p class="w-last-message">El panel de speakers esta buanazo</p>
-	  						</div>
-							<div class="time">09:25</div>
-	  					</li>
-	  					<li>
-	  						<div class="avatar">
-	  							<img src="image/mariapaula.jpg" alt="" class="wh-44">
-	  							<h4 class="w-contact-name">Maria Paula Rivarola</h4>
-	  							<p class="w-last-message">Wuju! esto me encanta!! en verdad!</p>
-	  						</div>
-	  						<div class="time">13/01/2016</div>
-	  					</li>
-	  					<li>
-	  						<div class="avatar">
-	  							<img src="image/katy.jpg" alt="" class="wh-44">
-	  							<h4 class="w-contact-name">Katy Sanchez</h4>
-	  							<p class="w-last-message">No te preocupes, tengo el salón bajo control</p>
-	  						</div>
-	  						<div class="time">11/01/2016</div>
-	  					</li>
-	  					<li>
-	  						<div class="avatar">
-	  							<img src="image/aldo.jpg" alt="" class="wh-44">
-	  							<h4 class="w-contact-name">Aldo Alfaro</h4>
-	  							<p class="w-last-message">Vao a comer?</p>
-	  						</div>
-	  						<div class="time">03/01/2016</div>
-	  					</li>	 
 	  				</ul>
 	  			</aside>
 	  			<section class="col-md-8 w-contacts w-messages">
-	  				<header class="w-chat-messages clearfix">
+	  				<header class="w-chat-messages clearfix" id="chat-header">
 	  					<div class="avatar col-xs-9 w-chat-profile">
 	  						<img src="image/logocodeacademy.png" alt="">
 	  						<h4 class="w-contact-name">Laboratoria Perú</h4>

@@ -34,7 +34,7 @@ function Mensaje(_mensaje, _enviar)
 	this.recibir = false;
 }
 
-//funcion general
+/*/funcion general
 function general ()
 {
     this.chatear = [];
@@ -178,3 +178,4 @@ function onInputKeyUp(evento)
 		evento.target.value = " ";
 	}
 }
+*/
