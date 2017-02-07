@@ -43,16 +43,14 @@ function general ()
     this.listaChat = function (_htmlTarget)
     {
         //definiendo  fecha
-        var actual = new Date();
-        var fecha =actual.getDate()+'/'+actual.getMonth()+'/'+actual.getYear();
-        window.status=fecha;
-        //console.log(fecha);
+        var fecha = new Date();        
+        console.log(fecha);
         var contactosList = document.getElementById("contactos");
         for (var i in this.chatear)
         {
             //console.log(htmlLista);
             var htmlLista ='<li><div class="avatar">' +	'<img src="' + this.chatear[i].chatImagen + '" alt="" class="wh-44">' +	'<h4 class="w-contact-name">' + this.chatear[i].nombre+'</h4>' +'<p class="w-last-message">'+this.chatear[i].mensajes[this.chatear[i].mensajes.length-1].mensaje + '</p>' +	'</div>' +
-            '<div class="time">'+fecha+'</div>'
+            '<div class="time">'+dia+ '/'+mes+'/'+anio+'</div>'
             +'</li>';
             
             contactosList.innerHTML += htmlLista;
@@ -118,7 +116,7 @@ chat1.gente.push(Eva);
 chat1.chatImagen="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSegj5Tx4gQv3RQVqazZqQBHkVhrLO_yu2rfQL8QYH2BNVTFSf1";
 wapp.chatear.push(chat1);
 
-//segundo contacto
+//segundo contacto  
 var chat2 = new Chat();
 chat2.nombre="Cristian";
 chat2.gente.push(Cristian);

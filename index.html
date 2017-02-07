@@ -21,18 +21,64 @@
 	  					<div class="avatar col-xs-7">
 	  						<img src="image/gian.jpg" alt="">
 	  					</div>
-	  					
+
 	  					<div class="w-chat-controls col-xs-4">
 	  						<div class="icon-dots-three-vertical"></div>
 	  						<div class="icon-message"></div>
 	  					</div>
 	  				</header>
 	  				<div class="w-search icon-search">
-	  					<input type="text" placeholder="Buscar o empezar un chat nuevo" class="w-search-contacts" id="search">
+	  					<input type="text" placeholder="Buscar o empezar un chat nuevo" class="w-search-contacts">
 	  				</div>
-	  				<!----------------LISTA DE CONTACTOS----------------->
-	  				<ul class="w-recent-chats" id="contactos">
-	  					
+	  				<ul class="w-recent-chats" id="lista-chat">
+	  					<li>
+		  					<div class="avatar">
+		  						<img src="image/logocodeacademy.png" alt="" class="wh-44">
+		  						<h4 class="w-contact-name">Laboratoria Perú</h4>
+		  						<p class="w-last-message" id="mensaje">No se pique!!</p>
+		  					</div>
+							<div class="time" id="hora">14:27</div>
+	  					</li>
+	  					<li>
+	  						<div class="avatar">
+	  							<img src="image/raymi.jpg" alt="" class="wh-44">
+	  							<h4 class="w-contact-name">Raymi Saldomando</h4>
+	  							<p class="w-last-message">La clase va bien!</p>
+	  						</div>
+	  						<div class="time">11:25</div>
+	  					</li>
+	  					<li>
+	  						<div class="avatar">
+	  							<img src="image/mariana.jpg" alt="" class="wh-44">
+	  							<h4 class="w-contact-name">Mariana Costa</h4>
+	  							<p class="w-last-message">El panel de speakers esta buanazo</p>
+	  						</div>
+							<div class="time">09:25</div>
+	  					</li>
+	  					<li>
+	  						<div class="avatar">
+	  							<img src="image/mariapaula.jpg" alt="" class="wh-44">
+	  							<h4 class="w-contact-name">Maria Paula Rivarola</h4>
+	  							<p class="w-last-message">Wuju! esto me encanta!! en verdad!</p>
+	  						</div>
+	  						<div class="time">13/01/2016</div>
+	  					</li>
+	  					<li>
+	  						<div class="avatar">
+	  							<img src="image/katy.jpg" alt="" class="wh-44">
+	  							<h4 class="w-contact-name">Katy Sanchez</h4>
+	  							<p class="w-last-message">No te preocupes, tengo el salón bajo control</p>
+	  						</div>
+	  						<div class="time">11/01/2016</div>
+	  					</li>
+	  					<li>
+	  						<div class="avatar">
+	  							<img src="image/aldo.jpg" alt="" class="wh-44">
+	  							<h4 class="w-contact-name">Aldo Alfaro</h4>
+	  							<p class="w-last-message">Vao a comer?</p>
+	  						</div>
+	  						<div class="time">03/01/2016</div>
+	  					</li>	 
 	  				</ul>
 	  			</aside>
 	  			<section class="col-md-8 w-contacts w-messages">
@@ -51,6 +97,7 @@
 	  					</div>
 	  					<div class="w-chat-controls col-xs-2">
 	  						<div class="icon-attachment"></div>
+
 	  						<div class="icon-dots-three-vertical"></div>
 	  					</div>
 	  				</header>
@@ -77,21 +124,21 @@
 	  								<div class="time">11:13</div>
 	  							</div>
 	  						</div>
-	  						
+
 	  						<div class="w-message w-message-out">
 	  							<div class="w-message-text">
 	  								<p>Antes parecia mufasa jajajaja</p>
 	  								<div class="time">11:14</div>
 	  							</div>
 	  						</div>
-	  						
+
 	  						<div class="w-message w-message-out">
 	  							<div class="w-message-text">
 	  								<p>Ahora si esta decente</p>
 	  								<div class="time">11:18</div>
 	  							</div>
 	  						</div>
-	  						
+
 	  						<div class="w-message w-message-in">
 	  							<div class="w-message-text">
 	  								<h5 class="blue-1">Andrea Lamas</h5>
@@ -99,7 +146,7 @@
 	  								<div class="time">11:20</div>
 	  							</div>
 	  						</div>
-	  						
+
 	  						<div class="w-message w-message-in">
 	  							<div class="w-message-text">
 	  								<h5 class="yellow-1">Aldo Alfaro</h5>
@@ -107,7 +154,7 @@
 	  								<div class="time">11:25</div>
 	  							</div>
 	  						</div>
-	  						
+
 	  						<div class="w-message w-message-in">
 	  							<div class="w-message-text">
 	  								<h5 class="blue-1">Andrea Lamas</h5>
@@ -154,13 +201,12 @@
 	  						</div>  							  						
 	  					</div>
 	  				</section>
-	  				
+
 	  				<footer class="pane-footer w-write-message-footer">
 	  					<ul class="w-write-message-list clearfix">
-	  						<li class="col-xs-1 w-write-message-item icon-insert_emoticon w-write-message-icon">                               
-	  						</li>
+	  						<li class="col-xs-1 w-write-message-item icon-insert_emoticon w-write-message-icon"></li>
 	  						<li class="col-xs-10 w-write-message-item w-write-message-input">
-	  							<input type="text" name="w-message-input" class="w-write-message-field" placeholder="Escribe tu mensaje aquí" id="mensajes">
+	  							<input type="text" name="w-message-input" class="w-write-message-field" onkeyup="onMensajeKey(event)"  placeholder="Escribe tu mensaje aquí" id="mensajes">
 	  						</li>
 	  						<li class="col-xs-1 w-write-message-item icon-mic w-write-message-icon"></li>
 	  					</ul>
@@ -168,6 +214,6 @@
 	  			</section>
 	  		</div>
 	  	</div>
-		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/main2.js"></script>
 	</body>
 </html>
