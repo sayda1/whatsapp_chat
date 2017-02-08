@@ -24,21 +24,21 @@ function Chat(_nombre, _imagen , _mensaje, _fecha)
 var fecha= new Date();
 var listaDeChats=
 [
-    new Chat("Maday ", 'http://st-listas.20minutos.es/images/2011-03/279699/2982224_640px.jpg?1334875539' , 'bamos a comer..??', ''),
+    new Chat("Maday ", 'http://st-listas.20minutos.es/images/2011-03/279699/2982224_640px.jpg?1334875539' , 'bamos a comer..??', '12:00'),
     
-    new Chat("Zeldina " , 'http://www.mejoreslistasyrankings.com/images/0/5/1/actrices_y_cantantes_coreanas_mas_guapas_143150_portada.png', 'estoy durmiendo', ''),
+    new Chat("Zeldina " , 'http://www.mejoreslistasyrankings.com/images/0/5/1/actrices_y_cantantes_coreanas_mas_guapas_143150_portada.png', 'estoy durmiendo', '1:03'),
     
-    new Chat("Grace " , 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS3SJ3YqM-VUD7cQeaYZ1I1cXevMy13xirdurJph98bk96lZMoM' , 'si..!!!' , ''),
+    new Chat("Grace " , 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS3SJ3YqM-VUD7cQeaYZ1I1cXevMy13xirdurJph98bk96lZMoM' , 'si..!!!' , '7:03'),
     
-    new Chat("Rosa " , 'http://cde.3.elcomercio.pe/ima/0/0/8/3/7/837620/base_image.jpg' , 'donde esta la escoba.?', ''),
+    new Chat("Rosa " , 'http://cde.3.elcomercio.pe/ima/0/0/8/3/7/837620/base_image.jpg' , 'donde esta la escoba.?', '12:00'),
     
-    new Chat("Misterio " , 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTygypdZfncEfd46sDd7z_N6buMAscTTfcbe1aIFJ8p9SY7Owbs' , 'kien soy ..??', ''),
+    new Chat("Misterio " , 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTygypdZfncEfd46sDd7z_N6buMAscTTfcbe1aIFJ8p9SY7Owbs' , 'kien soy ..??', '7:15'),
     
-    new Chat("Cristian " , 'https://ugc.kn3.net/i/origin/http://imagenesfotos.com/wp-content/2008/11/naruto-14.jpg' , '...??' , ''),
+    new Chat("Cristian " , 'https://ugc.kn3.net/i/origin/http://imagenesfotos.com/wp-content/2008/11/naruto-14.jpg' , '...??' , '10:34'),
     
-    new Chat("Mona " , 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRhtiTxuRiKDno8MPuW0jGAMsNE2o6TlRgBUyG8dx0kQsP5z_hLkg' , 'porque esa cara.?' , ''),
+    new Chat("Mona " , 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRhtiTxuRiKDno8MPuW0jGAMsNE2o6TlRgBUyG8dx0kQsP5z_hLkg' , 'porque esa cara.?' , '10:32'),
     
-    new Chat("Cancervero " , 'http://cdn.noticiaaldia.com.s3.amazonaws.com/wp-content/uploads/2016/03/canse-400x227.jpg' , 'no me salen rimas que no sean reales', '')
+    new Chat("Cancervero " , 'http://cdn.noticiaaldia.com.s3.amazonaws.com/wp-content/uploads/2016/03/canse-400x227.jpg' , 'no me salen rimas que no sean reales', '3:20')
 ];
 
 //parte visual
@@ -46,6 +46,7 @@ var liItem = null;
 function init()
 {
     initChat();
+    borrar ();
 }
 
 function initChat()
@@ -73,8 +74,7 @@ function setEventsChatList()
     for (var i=0; i < lisItem.length; i++)
     {
         lisItem[i].addEventListener('click', onListaChatClick);
-    }
-    
+    }   
 }
 
 function  onListaChatClick(evt)
@@ -122,12 +122,15 @@ function crearMensajes (_mensaje)
     var chat = document.getElementById("chat");
     chat.innerHTML+=mensajeOut;
     chat.scrollTop=chat.scrollHeight;
-    
     //var conversacion= document.getElementById("conversacion");
     //conversacion.innerHTML+=mensajeOut;
 }
 
 //funcion para crear listas de chat
+function borrar (){
+    var borrar = document.getElementById("chat");
+    borrar.innerHTML="";
+}
 function crearListaChats (_mensaje)
 {
    var htmlLista=document.getElementById("lista-chat");
