@@ -46,7 +46,7 @@ var liItem = null;
 function init()
 {
     initChat();
-    borrar ();
+    vasio();
 }
 
 function initChat()
@@ -126,11 +126,11 @@ function crearMensajes (_mensaje)
     //conversacion.innerHTML+=mensajeOut;
 }
 
-//funcion para crear listas de chat
-function borrar (){
+function vasio(){
     var borrar = document.getElementById("chat");
     borrar.innerHTML="";
 }
+//funcion para crear listas de chat
 function crearListaChats (_mensaje)
 {
    var htmlLista=document.getElementById("lista-chat");
